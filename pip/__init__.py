@@ -221,7 +221,8 @@ def main(initial_args=None):
 
     try:
         cmd_name, options, args, parser = parseopts(initial_args)
-    except PipError as e:
+    except PipError:
+        e = sys.exc_info()[1]
         sys.stderr.write(str(e))
         sys.stderr.write(os.linesep)
         sys.exit(1)

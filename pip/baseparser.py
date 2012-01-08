@@ -62,11 +62,17 @@ class PipPrettyHelpFormatter(optparse.IndentedHelpFormatter):
 
     # leave full control over description to us
     def format_description(self, description):
-        return description if description else ''
+        if description:
+            return description
+        else:
+            return ''
 
     # leave full control over epilog to us
     def format_epilog(self, epilog):
-        return epilog if epilog else ''
+        if epilog:
+            return epilog
+        else:
+            return ''
 
 
 class UpdatingDefaultsHelpFormatter(PipPrettyHelpFormatter):

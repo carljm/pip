@@ -18,7 +18,7 @@ from pip.backwardcompat import StringIO, walk_packages
 from pip.status_codes import SUCCESS, ERROR, UNKNOWN_ERROR, VIRTUALENV_NOT_FOUND
 
 
-__all__ = 'Command'
+__all__ = ['Command']
 
 # for backwards compatibiliy
 get_proxy = urlopen.get_proxy
