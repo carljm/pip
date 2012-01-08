@@ -31,7 +31,7 @@ def get_summaries(ignore_hidden=True):
 
     items = []
 
-    for name, command_class in commands.iteritems():
+    for name, command_class in commands.items():
         if ignore_hidden and command_class.hidden:
             continue
 
